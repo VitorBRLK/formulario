@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/scripts.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <form id="formulario">
+            <h1 class="mb-4">Formulário</h1>
+             
+            <div class="form-group">
+                <!-- Campo para nome do usuário -->
+                <label for="nome"><b>Nome</b></label>
+                <input type="text" class="form-control" placeholder="Digite seu nome" name="nome" id="nome" required>
+            </div>            
+            <div class="form-group">
+                <!-- Campo para idade -->
+                <label for="idade"><b>Idade</b></label>
+                <input type="number" class="form-control" placeholder="Digite sua idade" name="idade" id="idade" required>
+            </div>
+            <div class="form-group">
+                <!-- Campo de CPF com formatação automática -->
+                <label for="cpf"><b>CPF</b></label>
+                <input type="text" class="form-control" placeholder="Digite seu CPF" id="cpf" name="cpf" required>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="cep"><b>CEP</b></label>
+                    <input type="text" class="form-control" placeholder="Informe o CEP" id="num_cep" name="num_cep" maxlength="10" required>
+                </div>
+                 <!-- Campos preenchidos automaticamente após consulta do CEP -->
+                <div class="form-group col-md-2">
+                    <label for="estado_str"><b>Estado</b></label>
+                    <input type="text" class="form-control" id="estado_str" placeholder="Estado" disabled>
+                    <input type="hidden" id="ide_estado" name="ide_estado">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="cidade_str"><b>Cidade</b></label>
+                    <input type="text" class="form-control" id="cidade_str" placeholder="Cidade" disabled>
+                    <input type="hidden" id="ide_cidade" name="ide_cidade">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="bairro_str"><b>Bairro</b></label>
+                    <input type="text" class="form-control" id="bairro_str" placeholder="Bairro" disabled>
+                    <input type="hidden" id="ide_bairro" name="ide_bairro">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="logradouro_str"><b>Logradouro</b></label>
+                    <input type="text" class="form-control" id="logradouro_str" placeholder="Logradouro" disabled>
+                    <input type="hidden" id="num_logradouro" name="num_logradouro">
+                </div>
+            </div>
+            <!-- Botão para enviar o formulário -->
+            <button type="submit" class="btn btn-primary mt-3">Salvar</button>
+        </form>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
